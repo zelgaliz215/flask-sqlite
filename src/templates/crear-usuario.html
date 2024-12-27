@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<a href="/">Inicio</a>
+<form action="{{url_for('create_user')}}" method="POST">
+    <h2>Crear Usuario</h2>
+
+    <label for="nombre">Ingresar Nombre</label>
+    <input type="text" name="nombre" id="nombre" placeholder="Ingresar Nombre">
+
+    <label for="email">Ingresar Email</label>
+    <input type="text" name="email" id="email" placeholder="Ingresar email">
+
+    <label for="phone">Ingresar telefono</label>
+    <input type="text" name="telefono" id="phone" placeholder="Ingresar telefono">
+
+    <input type="submit" value="Crear Usuario">
+
+</form>
+{% endblock %}

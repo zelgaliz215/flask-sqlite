@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<a href="/">Inicio</a>
+<h2>Lista de usuarios</h2>
+<hr>
+
+
+<!-- {{ users }} -->
+<ul>
+    {% for user in users %}
+    <li>
+        {{user['id']}} - {{ user.nombre }} - {{ user['email'] }} - {{ user['telefono'] }} - {{ user['fecha_registro']
+        }}
+        <a href="{{ url_for('edit_user', id=user['id']) }}">Editar usuario</a>
+    </li>
+    <hr>
+    {% endfor %}
+</ul>
+{% endblock %}
